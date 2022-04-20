@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atul.schoolmgtteacher">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/luncheric"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/luncheric"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SchoolmgtTeacher"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Dashboard"
+            android:exported="true" />
+
+        <receiver
+            android:name=".NetworkChangeReciever"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".spleshScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".plusclass"
+            android:exported="false" />
+        <activity
+            android:name=".add_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".Suggestion"
+            android:exported="false" />
+        <activity
+            android:name=".HomeWork"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment"
+            android:exported="false" />
+        <activity
+            android:name=".Material"
+            android:exported="false" />
+        <activity
+            android:name=".add_student"
+            android:exported="false" />
+        <activity
+            android:name=".noticee"
+            android:exported="false" />
+        <activity
+            android:name=".quotess"
+            android:exported="false" />
+        <activity
+            android:name=".logout"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
